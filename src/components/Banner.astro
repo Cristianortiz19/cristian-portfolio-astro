@@ -5,40 +5,56 @@ import BehanceIcon from "./icons/BehanceIcon.astro"
 import SocialPill from "./SocialPill.astro"
 ---
 
-<section class="mx-auto py-28 w-[970px] flex items-center">
-    <img class="absolute" src="/cris-image.webp" alt="">
-    <img src="/banner-background.webp" alt="">
-    <div class="pt-32 -ml-32">
-        <span>
-            <h2 class="text-white text-3xl">Hi there</h2>
-            <h2 class="text-white text-3xl">I am</h2>
-        </span>
+<section>
+    <div class=" py-28 pb-4 w-[970px] flex items-center scale-[0.50] sm:scale-[0.60] md:scale-[0.75] lg:scale-[1]">
+        <img class="absolute" src="/cris-image.webp" alt="">
+        <img src="/banner-background.webp" alt="">
+        <div class="pt-32 -ml-32">
+            <span>
+                <h2 class="text-white text-3xl">Hi there</h2>
+                <h2 class="text-white text-3xl">I am</h2>
+            </span>
 
-        <h1 class="text-white text-9xl font-extrabold mt-8">Cristian</h1>
-        <span class="-ml-28 flex items-baseline gap-14">
-            <h1 class="text-9xl font-extrabold" id="outlined-text">Ortiz</h1>
-            <img class="h-16" src="/banner-icon.webp" alt="">
-        </span>
-        <span>
-            <p class="text-[#FD621F] text-lg">Frontend Developer</p>
-            <p class="text-[#FD621F] text-lg">UI Designer</p>
-        </span>
-        <nav class="flex gap-x-2 mt-4">
-            <SocialPill href="https://www.linkedin.com/in/cristian-ortiz-melendez/">
-                <LinkedInIcon class="size-6" />
-                LinkedIn
-            </SocialPill>
-            <SocialPill href="https://github.com/Cristianortiz19">
-                <GithubIcon class="size-6" />
-                Github
-            </SocialPill>
-            <SocialPill href="https://www.behance.net/cristianortiz6">
-                <BehanceIcon class="size-6" />
-                Behance
-            </SocialPill>
-        </nav>
-        
+            <h1 class="text-white text-9xl font-extrabold mt-8">Cristian</h1>
+            <span class="-ml-28 flex items-baseline gap-14">
+                <h1 class="text-9xl font-extrabold" id="outlined-text">Ortiz</h1>
+                <img class="h-16" src="/banner-icon.webp" alt="">
+            </span>
+            <span>
+                <p class="text-[#FD621F] text-lg">Frontend Developer</p>
+                <p class="text-[#FD621F] text-lg">UI Designer</p>
+            </span>
+            <nav class="hidden gap-x-2 mt-4 lg:flex">
+                <SocialPill href="https://www.linkedin.com/in/cristian-ortiz-melendez/">
+                    <LinkedInIcon class="size-6" />
+                    LinkedIn
+                </SocialPill>
+                <SocialPill href="https://github.com/Cristianortiz19">
+                    <GithubIcon class="size-6" />
+                    Github
+                </SocialPill>
+                <SocialPill href="https://www.behance.net/cristianortiz6">
+                    <BehanceIcon class="size-6" />
+                    Behance
+                </SocialPill>
+            </nav>
+        </div>
     </div>
+
+    <nav class="flex gap-x-2 mt-4 lg:hidden justify-center">
+        <SocialPill href="https://www.linkedin.com/in/cristian-ortiz-melendez/">
+            <LinkedInIcon class="size-6" />
+            LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/Cristianortiz19">
+            <GithubIcon class="size-6" />
+            Github
+        </SocialPill>
+        <SocialPill href="https://www.behance.net/cristianortiz6">
+            <BehanceIcon class="size-6" />
+            Behance
+        </SocialPill>
+    </nav>
 
     <style>
         #outlined-text {

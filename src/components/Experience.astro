@@ -7,7 +7,7 @@ const EXPERIENCE = [
         description: "I developed component design, information architecture, usability testing, validation and construction of web and mobile portals for the organization."
     },
     {
-        date: "Jun 2021 - Presente",
+        date: "Jun 2021 - Present",
         company: "Terminal Agency",
         position: "UI Designer | Graphic Designer | Audiovisual Artist",
         description: "I designed brand identities, graphic proposals, interfaces, and produced videos with VFX, turning ideas into visual solutions aligned with each project's goals."
@@ -43,6 +43,7 @@ console.log(EXPERIENCE)
 
 <section class="relative min-h-screen flex flex-col justify-center overflow-hidden">
     <div class="w-full max-w-6xl mx-auto px-4 md:px-6 py-24">
+        <h2>Experience</h2>
         <div class="flex flex-col justify-center divide-y divide-slate-200 [&>*]:py-16">
 
             <div class="w-full max-w-3xl mx-auto">
@@ -56,13 +57,13 @@ console.log(EXPERIENCE)
                                     <div class="font-medium text-[#FD621F] mb-1 sm:mb-0">{company}</div>
                                     <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 
                                     sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 
-                                    before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content 
-                                    after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                                    before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-[#2857C9] after:border-4 after:box-content 
+                                    after:border-[#02040C] after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
                                         <time class="sm:absolute -left-20 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold 
                                         uppercase w-auto px-3 h-6 mb-3 sm:mb-0 text-white  bg-[#2857C9] rounded-full">{date}</time>
-                                        <div class="text-xl font-bold text-white">{position}</div>
+                                        <p class="text-xl font-bold text-white">{position}</p>
                                     </div>
-                                    <div class="text-slate-500">{description}</div>
+                                    <p class="text-slate-500 text-pretty">{description}</p>
                                 </div>
                             )
                         })
