@@ -1,7 +1,14 @@
+---
+import LinkedInIcon from "./icons/LinkedInIcon.astro"
+import GithubIcon from "./icons/GithubIcon.astro"
+import BehanceIcon from "./icons/BehanceIcon.astro"
+import SocialPill from "./SocialPill.astro"
+---
+
 <section class="mx-auto py-28 w-[970px] flex items-center">
     <img class="absolute" src="/cris-image.webp" alt="">
     <img src="/banner-background.webp" alt="">
-    <div class="pt-16 -ml-32">
+    <div class="pt-32 -ml-32">
         <span>
             <h2 class="text-white text-3xl">Hi there</h2>
             <h2 class="text-white text-3xl">I am</h2>
@@ -16,6 +23,21 @@
             <p class="text-[#FD621F] text-lg">Frontend Developer</p>
             <p class="text-[#FD621F] text-lg">UI Designer</p>
         </span>
+        <nav class="flex gap-x-2 mt-4">
+            <SocialPill href="https://www.linkedin.com/in/cristian-ortiz-melendez/">
+                <LinkedInIcon class="size-6" />
+                LinkedIn
+            </SocialPill>
+            <SocialPill href="https://www.linkedin.com/in/cristian-ortiz-melendez/">
+                <GithubIcon class="size-6" />
+                Github
+            </SocialPill>
+            <SocialPill href="https://www.linkedin.com/in/cristian-ortiz-melendez/">
+                <BehanceIcon class="size-6" />
+                Behance
+            </SocialPill>
+        </nav>
+        
     </div>
 
     <style>
