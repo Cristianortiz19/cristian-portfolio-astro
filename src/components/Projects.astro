@@ -38,7 +38,7 @@ const projects = [
         year: '2023',
         description: "Redesign and development of Banco W's website, focused on enhancing usability and user experience for micro-entrepreneurs and small businesses. The project included a UX investigation to identify improvement areas.",
         link: "https://banco-w-site.vercel.app/",
-        image: "/fotico",
+        image: "/project1.webp",
         tags: [tags.html, tags.javascript, tags.scss],
         color: `background-color: #FD621F;`
     },
@@ -47,7 +47,7 @@ const projects = [
         year: '2023',
         description: "Enerwave is a web application that simplifies the life of bitorins by providing an integrated support tool. This means that they will not have to add a new platform to their experience. Everything you need for your bitorins will be on a single platform, without the need for complications.",
         link: "https://www.behance.net/gallery/185603759/Enerwave",
-        image: "/fotico",
+        image: "/project2.webp",
         tags: [tags.html, tags.css, tags.javascript],
         color: `background-color: #2857C9;`
     },
@@ -56,7 +56,7 @@ const projects = [
         year: '2024',
         description: "A web portal called “Conectémonos” was created in less than 4 months, integrating the 17 platforms currently used by Eficacia's employees, which increased efficiency and improved the user experience.",
         link: "https://www.behance.net/gallery/201528415/Portal-Conectmonos-Eficacia",
-        image: "/fotico",
+        image: "/project3.webp",
         tags: [tags.react, tags.css, tags.storybook],
         color: `background-color: #FD621F;`
     },
@@ -65,7 +65,7 @@ const projects = [
         year: '2023',
         description: "Jardín Plaza aims to provide full access to information, interactive features and exclusive services. By adressing the lack of information and personalized interaction, the proposed application has the potencial to greatly enhance the overall experience and foster greater engagement between visitors and the mall",
         link: "https://www.behance.net/gallery/172652027/Jardin-Plaza-Mobile-UXUI-Project",
-        image: "/fotico",
+        image: "/project4.webp",
         tags: [tags.ui, tags.ux],
         color: `background-color: #2857C9;`
     },
@@ -74,7 +74,7 @@ const projects = [
         year: '2023',
         description: "MunchMatch ends lunchtime indecision. This app blends your taste preferences, location and budget for personalized cafeteria recommendations. Whether you crave you crave savory or sweet, MuchMatch has you covered, making your dining experience seamless and railored to your linking",
         link: "https://www.behance.net/gallery/185666373/MUNCHMATCH-Food-recomendation-App",
-        image: "/fotico",
+        image: "/project5.webp",
         tags: [tags.python ,tags.html, tags.css, tags.javascript],
         color: `background-color: #FD621F;`
     },
@@ -83,18 +83,19 @@ const projects = [
 
 <section>
     <h2>Projects</h2>
-    <span class="grid grid-cols-3 gap-3">
+    <span class="grid grid-cols-1 gap-3 xl:grid-cols-3 md:grid-cols-2">
         {
-            projects.map(({ title, year, description, color }) => {
+            projects.map(({ title, year, description, color, image }) => {
                 return (
-                <article class="px-2 py-2 bg-stone-700/30 rounded-[12px] border border-stone-700/60">
-                    <div class='h-16 px-5 py-5 rounded-[5px] flex flex-col gap-5 overflow-hidden hover:overflow-visible hover:h-64 transition-all group' style={color}>
+                <article class="px-2 py-2 bg-stone-700/30 rounded-[12px] border border-stone-700/60 flex flex-col gap-2">
+                    <div class='h-16 px-5 py-5 rounded-[5px] flex flex-col gap-5 overflow-hidden hover:overflow-visible hover:h-64 transition-all duration-300 group' style={color}>
                         <span class="flex justify-between">
                             <h4>{ title }</h4>
                             <h4>{ year }</h4>
                         </span>
-                        <p class="opacity-0 group-hover:opacity-100 transition-all">{ description }</p>
+                        <p class="opacity-0 group-hover:opacity-100 transition-all duration-700">{ description }</p>
                     </div>
+                    <figure class=""><img src={ image } class="rounded-[5px] bg-cover bg-center" alt=""></figure>
                 </article>
                 )
             })
