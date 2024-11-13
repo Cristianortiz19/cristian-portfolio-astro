@@ -81,14 +81,14 @@ const projects = [
 ]
 ---
 
-<section>
+<section class="flex flex-col gap-5">
     <h2>Projects</h2>
     <span class="grid grid-cols-1 gap-3 xl:grid-cols-3 md:grid-cols-2">
         {
             projects.map(({ title, year, description, color, image }) => {
                 return (
-                <article class="px-2 py-2 bg-stone-700/30 rounded-[12px] border border-stone-700/60 flex flex-col gap-2">
-                    <div class='h-16 px-5 py-5 rounded-[5px] flex flex-col gap-5 overflow-hidden hover:overflow-visible hover:h-64 transition-all duration-300 group' style={color}>
+                <article class="px-2 py-2 bg-stone-700/30 rounded-[12px] border border-stone-700/60 flex flex-col gap-2 group">
+                    <div class='h-16 px-5 py-5 rounded-[5px] flex flex-col gap-5 overflow-hidden group-hover:overflow-visible group-hover:h-64 transition-all duration-300' style={color}>
                         <span class="flex justify-between">
                             <h4>{ title }</h4>
                             <h4>{ year }</h4>
