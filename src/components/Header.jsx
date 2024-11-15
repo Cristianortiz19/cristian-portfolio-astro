@@ -29,8 +29,8 @@ export function Header() {
                 <HeaderLinks />
             </nav>
 
-            <div className="flex flex-col items-end gap-4">
-                <button onClick={toggleNavbar} className="md:hidden">
+            <div className="flex flex-col items-end gap-4 md:hidden">
+                <button onClick={toggleNavbar}>
                     {
                         isOpen ? <X color="white" /> : <Menu color="white"/>
                     }
@@ -38,7 +38,7 @@ export function Header() {
 
                 {
                     isOpen &&
-                    <div className="flex">
+                    <div>
                         <HeaderLinks />
                     </div>
                 }
