@@ -6,7 +6,7 @@ export function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleNavbar = () => {
-        console.log('dioss')
+        setIsOpen(!isOpen);
     };
 
     useEffect(() => {
@@ -14,10 +14,10 @@ export function Header() {
     }, []);
 
     return (
-        <header className="flex py-8 px-8 mx-auto md:px-20  lg:px-48 flex-wrap justify-between items-center z-50 fixed top-0 w-full" id="header-nav">
+        <header className="flex py-8 px-8 mx-auto md:px-20  lg:px-48 flex-wrap justify-between items-start md:items-center z-50 fixed top-0 w-full" id="header-nav">
             <div className="flex flex-row items-center gap-2 ">
                 <img 
-                    class="w-13 h-8" 
+                    className="w-13 h-8" 
                     src="/cris-logo.webp" 
                     alt="cris-logo"
                 />
@@ -29,27 +29,27 @@ export function Header() {
                 <HeaderLinks />
             </nav>
 
-            <button onClick={toggleNavbar} className="md:hidden">
-                {
-                    isOpen 
-                    ? <X color="white" />
-                    : <Menu color="white"/>
-                }
-            </button>
+            <div className="flex flex-col items-end gap-4">
+                <button onClick={toggleNavbar} className="md:hidden">
+                    {
+                        isOpen ? <X color="white" /> : <Menu color="white"/>
+                    }
+                </button>
 
-            {
-                isOpen &&
-                <div className="flex">
-                    <HeaderLinks />
-                </div>
-            }
+                {
+                    isOpen &&
+                    <div className="flex">
+                        <HeaderLinks />
+                    </div>
+                }
+            </div>
         </header>
     )
 }
 
 export const HeaderLinks = () => {
     return (
-        <nav className="flex flex-col md:flex-row gap-x-10 opacity-80 items-center">
+        <nav className="flex flex-col md:flex-row md:gap-x-10 gap-5 opacity-80 items-center">
             <a href="/">Home</a>
             <a href="#about">About</a>
             <a href="/projects">Projects</a>
